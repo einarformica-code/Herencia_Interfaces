@@ -7,5 +7,6 @@ public interface Vivir {
 	void dormir();
 	
 	void hacerRuido();
+	
 
 }
