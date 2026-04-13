@@ -60,7 +60,6 @@ public abstract class AnimalDomestico implements Vivir {
 		return "AnimalDomestico [nombre=" + nombre + ", raza=" + raza + ", peso=" + peso + ", color=" + color + "]";
 	}
 	
-	public 
-	
+
 	
 }

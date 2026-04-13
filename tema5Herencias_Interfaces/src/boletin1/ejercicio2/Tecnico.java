@@ -1,4 +1,4 @@
-package ejercicio2;
+package boletin1.ejercicio2;
 
 public class Tecnico extends Operario {
 
