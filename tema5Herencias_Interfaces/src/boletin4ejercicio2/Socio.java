@@ -1,4 +1,4 @@
-package boletin2.ejercicio1;
+package boletin4ejercicio2;
 
 import java.util.Comparator;
 

@@ -1,4 +1,6 @@
-package boletin2.ejercicio2;
+package boletin4ejercicio3;
+
+import java.util.Comparator;
 
 public class Futbolista implements Comparable<Futbolista> {
 
@@ -20,11 +22,11 @@ public class Futbolista implements Comparable<Futbolista> {
     public int getEdad()           { return edad; }
     public int getNumeroGoles()    { return numeroGoles; }
 
-    
+   
     @Override
    	public String toString() {
-   		return "Futbolista [numeroCamiseta=" + numeroCamiseta + ", nombre=" + nombre + ", edad=" + edad
-   				+ ", numeroGoles=" + numeroGoles + "]";
+   		return "numeroCamiseta=" + numeroCamiseta + "\n nombre=" + nombre + "\n edad=" + edad
+   				+ ", numeroGoles=" + numeroGoles + "\n --------------------------------------\n";
    	}
 
 
@@ -38,8 +40,7 @@ public class Futbolista implements Comparable<Futbolista> {
                 && this.nombre.equals(otro.nombre);
     }
 
-   
-	@Override
+    @Override
     public int hashCode() {
         return 31 * numeroCamiseta + nombre.hashCode();
     }
@@ -51,4 +52,8 @@ public class Futbolista implements Comparable<Futbolista> {
         if (cmp != 0) return cmp;
         return this.nombre.compareTo(otro.nombre);
     }
+    
+    final static Comparator<Futbolista> edadAscendente = (f1, f2) -> -Integer.compare(f1.edad, f2.edad);
+    
+    final static Comparator<Futbolista> golesDesc=(f1, f2)->Integer.compare(f1.numeroGoles, f2.numeroGoles);
 }
